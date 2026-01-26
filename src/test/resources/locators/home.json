@@ -1,0 +1,22 @@
+{
+  "searchBox": {
+    "type": "xpath",
+    "value": "(//div[@class='initialComponent-hk7c_9tvgJ8ELzRuGJwC'])[1]"
+  },
+  "logo": {
+    "type": "xpath",
+    "value": "//a[@title='Hepsiburada']//*[name()='svg']"
+  },
+  "acceptCookies": {
+    "type": "id",
+    "value": "onetrust-accept-btn-handler"
+  },
+  "searchButton": {
+    "type": "xpath",
+    "value": "(//input[@placeholder='Ürün, kategori veya marka ara'])[1]"
+  },
+  "searchResult": {
+    "type": "xpath",
+    "value": "(//h1[@class='searchResultSummaryNewDesign-CMkgzAdtKhPA61eHquT8'])[1]"
+  }
+}
