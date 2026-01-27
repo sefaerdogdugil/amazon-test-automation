@@ -1,22 +1,26 @@
 {
+  "deliveryPopUp": {
+    "type": "xpath",
+    "value": "//input[contains(@class,'a-button-input') and @type='submit']"
+  },
+  "continueButton": {
+    "type": "xpath",
+    "value": "//button[normalize-space()='Continue shopping']"
+  },
+  "logoAmazon": {
+    "type": "xpath",
+    "value": "//div[@id='nav-logo']"
+  },
   "searchBox": {
     "type": "xpath",
-    "value": "(//div[@class='initialComponent-hk7c_9tvgJ8ELzRuGJwC'])[1]"
-  },
-  "logo": {
-    "type": "xpath",
-    "value": "//a[@title='Hepsiburada']//*[name()='svg']"
-  },
-  "acceptCookies": {
-    "type": "id",
-    "value": "onetrust-accept-btn-handler"
+    "value": "//input[@id='twotabsearchtextbox']"
   },
   "searchButton": {
     "type": "xpath",
-    "value": "(//input[@placeholder='Ürün, kategori veya marka ara'])[1]"
+    "value": "//input[@id='nav-search-submit-button']"
   },
-  "searchResult": {
+  "searchResultText": {
     "type": "xpath",
-    "value": "(//h1[@class='searchResultSummaryNewDesign-CMkgzAdtKhPA61eHquT8'])[1]"
+    "value": "//span[@class='a-color-state a-text-bold']"
   }
 }

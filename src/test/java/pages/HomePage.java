@@ -1,53 +1,56 @@
 package pages;
 
-import driver.DriverFactory;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import utils.LocatorUtil;
-import utils.WaitUtil;
+public class HomePage extends BasePage {
 
-import static utils.ElementUtil.isVisible;
-
-public class HomePage {
-
-    WebDriver driver = DriverFactory.getDriver();
-
-    private final By logo = LocatorUtil.getLocator("home", "logo");
-    private final By searchBox = LocatorUtil.getLocator("home", "searchBox");
-    private final By acceptCookiesBtn = LocatorUtil.getLocator("home", "acceptCookies");
-    private final By searchButton = LocatorUtil.getLocator("home", "searchButton");
-    private final By searchResult = LocatorUtil.getLocator("home", "searchResult");
-
-    public void open() {
-        driver.get("https://www.hepsiburada.com");
+    public HomePage() {
+        super("home");
     }
 
-    public void acceptCookiesIfPresent() {
-        try {
-            WaitUtil.waitForClickable(acceptCookiesBtn).click();
-            System.out.println("🍪 Cookies accepted");
-        } catch (Exception e) {
-            System.out.println("🍪 No cookies popup");
+    public void open() {
+        openUrl("https://www.amazon.com");
+    }
+
+    public void clickContinueButton() {
+
+        if (isVisible("continueButton")) {
+            waitForClickable("continueButton");
+            click("continueButton");
         }
     }
 
-    public void logoIsDisplayed() {
-        isVisible(logo);
+
+    public void closeDeliveryAddressPopup() {
+        isVisible("deliveryPopUp");
+        waitForClickable("deliveryPopUp");
+        click("deliveryPopUp");
+
+
     }
 
-    public void clickSearchBox() {
-        WaitUtil.waitForClickable(searchBox).click();
+
+    public void verifyLogoIsDisplayed() {
+        waitForVisible("logo", 15);
+        assert isVisible("logo") : "Amazon logo is not visible";
     }
 
-    public void writeSearchText(String text) {
-       driver.findElement(searchBox).sendKeys(text);
+    public void typeProductToSearchBox(String product) {
+        waitForVisible("searchBox", 15);
+        click("searchBox");
+        sendKeys("searchBox", product);
     }
 
     public void clickSearchButton() {
-        WaitUtil.waitForClickable(searchButton).click();
+        waitForClickable("searchButton");
+        click("searchButton");
     }
 
-    public void checkSearchResult() {
-        isVisible(searchResult);
+    public void verifySearchResults(String product) {
+        waitForVisible("searchResultText", 15);
+
+        String resultText = getText("searchResultText");
+
+        assert resultText.contains(product)
+                : "Search result does not contain product: " + product
+                + " Actual text: " + resultText;
     }
 }

@@ -1,21 +1,15 @@
-# Hepsiburada Test
-
-## Anasayfa açılır
-* Hepsiburada anasayfasına git
-* Çerezleri kabul et
+# Amazon Test
 
 
-## Arama Yapılır
-* Hepsiburada anasayfasına git
-* Çerezleri kabul et
-* Arama kutusuna tıkla
-* Arama kutusuna "Bilgisayar" yaz
-* Aramayı başlat
-* Arama sonuçları görüntülenmeli
+## Arama Senaryosu
+ * Amazon anasayfasına git
+ * Continue butonuna bas
+ * Delivery adres popupını kapat
+ * Arama kutusuna "Bilgisayar" yaz
+ * Aramayı başlat
+ * Results for "Bilgisayar" yazısı görüntülenmeli
+
+----------------------------
 
 
 
-## Logo Görüntülendi mi?
-* Hepsiburada anasayfasına git
-* Çerezleri kabul et
-* Logo yüklendi mi?

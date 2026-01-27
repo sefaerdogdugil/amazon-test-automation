@@ -5,40 +5,42 @@ import pages.HomePage;
 
 public class StepImplementation {
 
-    HomePage homePage = new HomePage();
+    private final HomePage homePage = new HomePage();
 
-    @Step("Hepsiburada anasayfasına git")
+    @Step("Amazon anasayfasına git")
     public void openHomePage() {
         homePage.open();
     }
 
-    @Step("Çerezleri kabul et")
-    public void acceptCookies() {
-        homePage.acceptCookiesIfPresent();
+    @Step("Continue butonuna bas")
+    public void clickContinueButton() {
+        homePage.clickContinueButton();
+
+
     }
 
-    @Step("Logo yüklendi mi?")
-    public void logoDisplayed() {
-        homePage.logoIsDisplayed();
+    @Step("Delivery adres popupını kapat")
+    public void closeDeliveryAddressPopup() {
+        homePage.closeDeliveryAddressPopup();
     }
 
-    @Step("Arama kutusuna tıkla")
-    public void aramaKutusunaTikla() {
-        homePage.clickSearchBox();
+    @Step("Amazon logosu görüntülenmeli")
+    public void verifyAmazonLogoIsDisplayed()  {
+        homePage.verifyLogoIsDisplayed();
     }
 
-    @Step("Arama kutusuna <text> yaz")
-    public void aramaKutusunaYaz(String text) {
-        homePage.writeSearchText(text);
+    @Step("Arama kutusuna <product> yaz")
+    public void typeProductToSearchBox(String product)  {
+        homePage.typeProductToSearchBox(product);
     }
 
     @Step("Aramayı başlat")
-    public void aramaBaslat() {
+    public void clickSearchButton() {
         homePage.clickSearchButton();
     }
 
-    @Step("Arama sonuçları görüntülenmeli")
-    public void aramaSonucuKontrolEt() {
-        homePage.checkSearchResult();
+    @Step("Results for <product> yazısı görüntülenmeli")
+    public void verifySearchResultsForProduct(String product)  {
+        homePage.verifySearchResults(product);
     }
 }
