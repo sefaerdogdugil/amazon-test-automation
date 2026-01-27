@@ -20,7 +20,7 @@ public class StepImplementation {
     }
 
     @Step("Delivery adres popupını kapat")
-    public void closeDeliveryAddressPopup() {
+    public void closeDeliveryAddressPopup()  {
         homePage.closeDeliveryAddressPopup();
     }
 
@@ -40,7 +40,8 @@ public class StepImplementation {
     }
 
     @Step("Results for <product> yazısı görüntülenmeli")
-    public void verifySearchResultsForProduct(String product)  {
+    public void verifyResults(String product) {
         homePage.verifySearchResults(product);
     }
+
 }

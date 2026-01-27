@@ -5,11 +5,13 @@
  * Amazon anasayfasına git
  * Continue butonuna bas
  * Delivery adres popupını kapat
- * Arama kutusuna "Bilgisayar" yaz
+ * Arama kutusuna "Telefon" yaz
  * Aramayı başlat
- * Results for "Bilgisayar" yazısı görüntülenmeli
+ * Results for "Telefon" yazısı görüntülenmeli
 
 ----------------------------
+
+##
 
 
 

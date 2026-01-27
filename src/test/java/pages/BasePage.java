@@ -44,7 +44,7 @@ public abstract class BasePage {
     protected boolean isVisible(By locator) { return ElementUtil.isVisible(locator); }
 
     // ==================== WAIT ====================
-    protected WebElement waitForVisible(String elementName, int i) { return WaitUtil.waitForVisible(pageName, elementName); }
+    protected WebElement waitForVisible(String elementName) { return WaitUtil.waitForVisible(pageName, elementName); }
     protected WebElement waitForClickable(String elementName) { return WaitUtil.waitForClickable(pageName, elementName); }
     protected void waitForUrl(String urlPart) { WaitUtil.waitForUrlContains(urlPart); }
 
