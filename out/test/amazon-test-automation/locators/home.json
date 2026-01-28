@@ -1,0 +1,26 @@
+{
+  "deliveryPopUp": {
+    "type": "xpath",
+    "value": "//input[contains(@class,'a-button-input') and @type='submit']"
+  },
+  "continueButton": {
+    "type": "xpath",
+    "value": "//button[normalize-space()='Continue shopping']"
+  },
+  "logoAmazon": {
+    "type": "xpath",
+    "value": "//div[@id='nav-logo']"
+  },
+  "searchBox": {
+    "type": "xpath",
+    "value": "//input[@id='twotabsearchtextbox']"
+  },
+  "searchButton": {
+    "type": "xpath",
+    "value": "//input[@id='nav-search-submit-button']"
+  },
+  "searchResultText": {
+    "type": "xpath",
+    "value": "//span[@class='a-color-state a-text-bold']"
+  }
+}
