@@ -1,11 +1,15 @@
 package steps;
 
 import com.thoughtworks.gauge.Step;
+import org.openqa.selenium.WebElement;
+import pages.BasePage;
 import pages.HomePage;
 
 public class StepImplementation {
 
     private final HomePage homePage = new HomePage();
+
+
 
     @Step("Amazon anasayfasına git")
     public void openHomePage() {
@@ -42,6 +46,21 @@ public class StepImplementation {
     @Step("Results for <product> yazısı görüntülenmeli")
     public void verifyResults(String product) {
         homePage.verifySearchResults(product);
+    }
+    @Step("Amazon anasayfasını hazırla")
+    public void prepareAmazonHomePage() {
+        openHomePage();
+        clickContinueButton();
+        closeDeliveryAddressPopup();
+    }
+    @Step("<product> için arama yap")
+    public void searchProduct(String product) {
+        typeProductToSearchBox(product);
+        clickSearchButton();
+    }
+   @Step("İlk ürüne tıkla")
+    public void clickFirstResult(){
+        homePage.clickFirstResult();
     }
 
 }

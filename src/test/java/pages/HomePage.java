@@ -1,6 +1,11 @@
 package pages;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class HomePage extends BasePage {
+
+    private static final Logger log = LoggerFactory.getLogger(HomePage.class);
 
     public HomePage() {
         super("home");
@@ -15,19 +20,20 @@ public class HomePage extends BasePage {
         if (isVisible("continueButton")) {
             waitForClickable("continueButton");
             click("continueButton");
+            log.info("Countiniue Tıklandı");
+        } else {
+            log.info("Countinue Button görünmedi");
         }
 
     }
 
 
-    public void closeDeliveryAddressPopup()  {
+    public void closeDeliveryAddressPopup() {
         if (isVisible("deliveryPopUp")) {
             waitForClickable("deliveryPopUp");
             click("deliveryPopUp");
-        }
-        else System.out.println("Popup görünmedi");
+        } else log.info("Pop up görünmedi");
     }
-
 
 
     public void verifyLogoIsDisplayed() {
@@ -62,7 +68,16 @@ public class HomePage extends BasePage {
                             " | Actual text: " + resultText
             );
         }
+
+        log.info("Search result contains product: " + product);
     }
 
 
+    public void clickFirstResult() {
+        waitForClickable("firstResult");
+        click("firstResult");
+        log.info("Ürüne tıklandı");
+
+    }
 }
+

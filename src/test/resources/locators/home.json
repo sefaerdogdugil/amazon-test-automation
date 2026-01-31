@@ -1,4 +1,5 @@
-{
+
+  {
   "deliveryPopUp": {
     "type": "xpath",
     "value": "//input[contains(@class,'a-button-input') and @type='submit']"
@@ -22,5 +23,13 @@
   "searchResultText": {
     "type": "xpath",
     "value": "//span[@class='a-color-state a-text-bold']"
+  },
+  "firstResult": {
+    "type": "xpath",
+    "value": "//div[@data-component-type='s-search-result'][1]"
+  },
+  "productPage": {
+    "type": "xpath",
+    "value": "//ul[@class='a-unordered-list a-horizontal a-size-small']"
   }
 }
